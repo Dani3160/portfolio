@@ -35,36 +35,97 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Floating Background Elements -->
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
+                <div class="hero-badge">✨ Open To Work</div>
                 <h1 class="hero-title">
                     <span class="greeting">Halo, Saya</span>
-                    <span class="name">Dani Ramdani</span>
-                    <span class="role">Web Developer</span>
+                    <span class="name">
+                        <span class="name-part">Dani</span>
+                        <span class="name-part">Ramdani</span>
+                    </span>
+                    <span class="role">
+                        <span class="role-word">Web</span>
+                        <span class="role-word">Developer</span>
+                    </span>
                 </h1>
                 <p class="hero-description">
-                    Saya adalah seorang Web Developer yang berfokus pada pembuatan website yang menarik,
-                    responsif, dan user-friendly. Saya memiliki passion dalam mengembangkan solusi digital
-                    yang kreatif dan inovatif.
+                    Saya adalah seorang <span class="highlight">Fullstack Web Developer</span> yang menangani
+                    pengembangan <span class="highlight">frontend </span> dan <span class="highlight"> backend</span>.
+                    Saya fokus membangun website serta aplikasi web yang cepat, responsif, aman, dan mudah digunakan.
+                    Saya memiliki passion dalam menciptakan solusi digital yang kreatif, efisien, dan mampu menjawab
+                    kebutuhan pengguna maupun bisnis.
                 </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Tahun Pengalaman</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Tahun Fullstack Developer</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">Tahun Backend Developer</div>
+                    </div>
+                </div>
                 <div class="hero-buttons">
-                    <a href="#portfolio" class="btn btn-primary">Lihat Portfolio</a>
+                    <a href="#portfolio" class="btn btn-primary">
+                        <span>Lihat Portfolio</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
                     <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
                 </div>
             </div>
             <div class="hero-image">
-                <div class="image-placeholder">
-                    <img src="myphoto.JPG" alt="Dani Ramdani" class="profile-photo">
+                <div class="image-wrapper">
+                    <div class="image-placeholder">
+                        <img src="myphoto.JPG" alt="Dani Ramdani" class="profile-photo">
+                    </div>
+
                 </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
+        <div class="about-bg-elements">
+            <div class="bg-circle circle-1"></div>
+            <div class="bg-circle circle-2"></div>
+            <div class="bg-circle circle-3"></div>
+        </div>
         <div class="container">
-            <h2 class="section-title">Tentang Saya</h2>
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Tentang Saya</h2>
+            </div>
             <div class="about-content">
+                <div class="about-visual">
+                    <div class="visual-card">
+                        <div class="card-content">
+                            <div class="visual-icon"></div>
+                            <h3>Web Developer</h3>
+                            <p>Passionate Developer</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="about-text">
                     <h3>Biodata</h3>
                     <div class="bio-info">
@@ -107,8 +168,12 @@
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
+        <div class="experience-bg-pattern"></div>
         <div class="container">
-            <h2 class="section-title">Pengalaman Kerja</h2>
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Pengalaman Kerja</h2>
+            </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
@@ -209,8 +274,14 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
+        <div class="skills-bg-gradient"></div>
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-intro">Teknologi dan tools yang saya kuasai untuk membangun aplikasi yang luar biasa
+                </p>
+            </div>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Frontend Development</h3>
@@ -277,9 +348,16 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
+        <div class="portfolio-bg-shapes">
+            <div class="bg-shape shape-a"></div>
+            <div class="bg-shape shape-b"></div>
+        </div>
         <div class="container">
-            <h2 class="section-title">Portfolio</h2>
-            <p class="section-subtitle">Beberapa proyek website yang telah saya kerjakan</p>
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">Beberapa proyek website yang telah saya kerjakan</p>
+            </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-image">
@@ -483,9 +561,19 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
+        <div class="contact-bg-waves">
+            <svg viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                    fill="rgba(139,92,246,0.05)" />
+            </svg>
+        </div>
         <div class="container">
-            <h2 class="section-title">Kontak</h2>
-            <p class="section-subtitle">kontak yang dapat dihubungi & alamat sekarang</p>
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Kontak</h2>
+                <p class="section-subtitle">kontak yang dapat dihubungi & alamat sekarang</p>
+            </div>
             <div class="contact-content">
                 <div class="contact-card">
                     <div class="contact-card-icon email-icon"></div>
@@ -515,6 +603,14 @@
             <p>&copy; 2025 Dani Ramdani. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"></path>
+        </svg>
+    </button>
 
     <!-- Portfolio Modal -->
     <div class="portfolio-modal" id="portfolioModal">
@@ -576,6 +672,52 @@
             observer.observe(section);
         });
 
+        // Portfolio Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all') {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        // For now, show all items (you can add data-category to items later)
+                        item.style.display = 'block';
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }
+                });
+            });
+        });
+
+        // Animate floating cards on scroll
+        const floatingCards = document.querySelectorAll('.floating-card');
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                } else {
+                    entry.target.style.animationPlayState = 'paused';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        floatingCards.forEach(card => {
+            cardObserver.observe(card);
+        });
+
         // Navbar scroll effect
         window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
@@ -584,6 +726,23 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
+
+            // Show/hide scroll to top button
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        scrollToTopBtn.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
 
         // Mobile menu toggle
