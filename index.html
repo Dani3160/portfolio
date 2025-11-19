@@ -284,7 +284,7 @@
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Frontend Development</h3>
+                    <h3>Frontend&nbsp;Development</h3>
                     <div class="skill-items">
                         <span class="skill-badge">HTML5</span>
                         <span class="skill-badge">CSS3</span>
@@ -326,13 +326,12 @@
                     <div class="skill-items">
                         <span class="skill-badge">Git</span>
                         <span class="skill-badge">GitHub</span>
+                        <span class="skill-badge">Gitlab</span>
                         <span class="skill-badge">Figma</span>
                         <span class="skill-badge">Postman</span>
                         <span class="skill-badge">Gemini API</span>
                         <span class="skill-badge">Meta API</span>
                         <span class="skill-badge">Xendit API</span>
-                        <span class="skill-badge">Midtrans API</span>
-                        <span class="skill-badge">Google Maps API</span>
                         <span class="skill-badge">Chart.js</span>
                         <span class="skill-badge">ApexCharts</span>
                         <span class="skill-badge">AJAX</span>
@@ -341,6 +340,8 @@
                         <span class="skill-badge">JSON</span>
                         <span class="skill-badge">Bug Fixing</span>
                         <span class="skill-badge">Team Work</span>
+                        <span class="skill-badge">Midtrans API</span>
+                        <span class="skill-badge">Google Maps API</span>
                     </div>
                 </div>
             </div>
@@ -670,36 +671,6 @@
             section.style.transform = 'translateY(30px)';
             section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(section);
-        });
-
-        // Portfolio Filter
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                this.classList.add('active');
-
-                const filter = this.getAttribute('data-filter');
-
-                portfolioItems.forEach(item => {
-                    if (filter === 'all') {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 10);
-                    } else {
-                        // For now, show all items (you can add data-category to items later)
-                        item.style.display = 'block';
-                        item.style.opacity = '1';
-                        item.style.transform = 'scale(1)';
-                    }
-                });
-            });
         });
 
         // Animate floating cards on scroll
