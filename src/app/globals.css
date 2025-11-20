@@ -2285,11 +2285,23 @@ section {
 
 /* Mobile & Tablet Portrait (up to 768px) */
 @media (max-width: 768px) {
+    /* Prevent horizontal scroll */
+    body, html {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+
+    /* Ensure all containers respect viewport */
+    .container {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
 
     /* Modal responsive for tablet */
     .modal-content {
         max-width: 92vw;
         max-height: 92vh;
+        padding: 0;
     }
 
     .modal-image-container {
@@ -2309,11 +2321,323 @@ section {
     .navbar .container {
         flex-wrap: nowrap;
         position: relative;
+        padding: 0.85rem 18px;
+        max-width: 100%;
     }
 
     /* Show hamburger button on mobile */
     .nav-toggle {
         display: flex;
+    }
+    
+    /* ========== HERO SECTION MOBILE FIX ========== */
+    .hero {
+        min-height: auto;
+        padding: 80px 0 40px;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    .hero .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 100%;
+        padding: 0 18px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Hero Content - Mobile */
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .hero-badge {
+        padding: 6px 16px;
+        font-size: 0.85rem;
+        margin-top: 0;
+        margin-bottom: 1.25rem;
+        white-space: nowrap;
+    }
+    
+    .hero-title {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1.25rem;
+        gap: 0.4rem;
+    }
+    
+    .greeting {
+        font-size: 1.05rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .name {
+        font-size: 2.5rem;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        justify-content: center;
+        width: 100%;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .name-part {
+        font-size: 2.5rem;
+    }
+    
+    .role {
+        font-size: 1.2rem;
+        width: 100%;
+        justify-content: center;
+        gap: 0.4rem;
+    }
+    
+    .role-word {
+        display: inline-block;
+    }
+    
+    .hero-description {
+        font-size: 0.98rem;
+        line-height: 1.7;
+        margin-bottom: 1.75rem;
+        padding: 0 5px;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .hero-description .highlight {
+        padding: 2px 6px;
+        font-size: 0.98rem;
+        white-space: normal;
+        display: inline;
+    }
+    
+    /* Hero Stats - Mobile */
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+        padding: 1.5rem 1rem;
+        margin: 1.5rem 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .stat-item {
+        text-align: center;
+        min-width: 0;
+    }
+    
+    .stat-number {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 0.35rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+        line-height: 1.3;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 0 2px;
+    }
+    
+    /* Hero Buttons - Mobile */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        width: 100%;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 11px 24px;
+        font-size: 0.92rem;
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    /* Hero Image - Mobile */
+    .hero-image {
+        width: 100%;
+        order: -1;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image-placeholder {
+        width: 200px;
+        height: 200px;
+        max-width: 80%;
+        aspect-ratio: 1/1;
+    }
+    
+    .profile-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    /* Scroll Indicator - Hide on mobile */
+    .scroll-indicator {
+        display: none;
+    }
+    
+    /* Floating Shapes - Reduce size on mobile */
+    .shape {
+        opacity: 0.5;
+    }
+    
+    .shape-1, .shape-2, .shape-3, .shape-4, .shape-5, .shape-6 {
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* ========== ABOUT SECTION MOBILE FIX ========== */
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        margin-top: 2rem;
+        width: 100%;
+        max-width: 100%;
+        align-items: center;
+    }
+    
+    .about-visual {
+        position: relative;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        order: -1;
+    }
+    
+    .visual-card {
+        transform: rotate(0deg);
+        padding: 2.5rem 2rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .visual-card:hover {
+        transform: rotate(0deg) scale(1.02);
+    }
+    
+    .visual-icon {
+        font-size: 3.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .visual-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .visual-card p {
+        font-size: 0.95rem;
+    }
+    
+    .about-text {
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+    }
+    
+    .about-text h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .bio-info {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        margin-bottom: 1.75rem;
+        width: 100%;
+    }
+    
+    .bio-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .bio-label {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-dark);
+        line-height: 1.4;
+    }
+    
+    .bio-value {
+        font-size: 0.95rem;
+        color: var(--text-light);
+        line-height: 1.5;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .bio-description {
+        font-size: 1rem;
+        line-height: 1.75;
+        color: var(--text-light);
+        text-align: justify;
+        margin-top: 1.5rem;
+    }
+    
+    /* Portfolio grid spacing */
+    .portfolio-grid {
+        gap: 1.75rem;
+    }
+    
+    /* Skills grid spacing */
+    .skills-grid {
+        gap: 1.75rem;
+    }
+    
+    /* Contact cards spacing */
+    .contact-content {
+        gap: 1.75rem;
+    }
+    
+    /* Prevent overflow */
+    * {
+        max-width: 100%;
     }
 
     /* Mobile menu styles */
@@ -2391,66 +2715,7 @@ section {
         width: 4px;
     }
 
-    .hero {
-        padding: 80px 0 40px;
-        min-height: auto;
-    }
-
-    .hero .container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .hero-stats {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 1.5rem;
-    }
-
-    .stat-number {
-        font-size: 2rem;
-    }
-
-    .floating-card {
-        display: none;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .about-visual {
-        position: relative;
-        top: 0;
-    }
-
-    .visual-card {
-        transform: rotate(0deg);
-    }
-
-    .name {
-        font-size: 2.5rem;
-        letter-spacing: -0.5px;
-    }
-
-    .role {
-        font-size: 1.3rem;
-    }
-
-    .hero-image {
-        margin-top: 1rem;
-        order: -1;
-    }
-
-    .image-placeholder {
-        width: 220px;
-        height: 220px;
-    }
+    /* Hero already fixed in @media (max-width: 768px) above */
 
     .section-title {
         font-size: 2rem;
@@ -2514,22 +2779,469 @@ section {
     }
 }
 
-@media (max-width: 480px) {
+/* Mobile - iPhone 14 Pro Max & Large (430px - 480px) */
+@media (max-width: 480px) and (min-width: 430px) {
     .navbar .container {
-        padding: 0.8rem 15px;
+        padding: 0.9rem 18px;
     }
 
     .nav-brand {
+        font-size: 1.4rem;
+    }
+
+    .hero {
+        padding: 80px 0 35px;
+        min-height: auto;
+    }
+
+    .name {
+        font-size: 2.25rem;
+        line-height: 1.1;
+    }
+
+    .role {
+        font-size: 1.15rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 12px;
+        line-height: 1.7;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        padding: 1.75rem 1.25rem;
+        margin: 2rem 0;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+
+    .image-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-buttons {
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .btn {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .section-title {
+        font-size: 1.9rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 55px 0;
+    }
+
+    .container {
+        padding: 0 18px;
+    }
+
+    .bio-info {
+        gap: 1.25rem;
+    }
+
+    .bio-label {
+        font-size: 0.9rem;
+    }
+
+    .bio-value {
+        font-size: 0.95rem;
+    }
+
+    .portfolio-grid {
+        gap: 1.75rem;
+    }
+
+    .portfolio-info {
+        padding: 1.75rem;
+    }
+
+    .portfolio-info h3 {
         font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .portfolio-info p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.25rem;
+    }
+
+    .skill-badge {
+        padding: 9px 18px;
+        font-size: 0.9rem;
+    }
+
+    .contact-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .timeline-content {
+        padding: 2rem;
+    }
+}
+
+/* Mobile - iPhone 12/13/14 & Standard (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+    .navbar .container {
+        padding: 0.85rem 16px;
+    }
+
+    .nav-brand {
+        font-size: 1.35rem;
     }
 
     .nav-menu {
-        top: 65px;
+        top: 68px;
+    }
+
+    .nav-menu a {
+        padding: 1.1rem 1.75rem;
+        font-size: 0.98rem;
+        min-height: 48px;
+    }
+
+    .hamburger {
+        width: 26px;
+        height: 3px;
+    }
+
+    /* Hero Section - Standard Mobile */
+    .hero {
+        padding: 78px 0 32px;
+        min-height: auto;
+    }
+
+    .hero .container {
+        padding: 0 14px;
+        gap: 1.6rem;
+    }
+    
+    .hero-badge {
+        padding: 6px 16px;
+        font-size: 0.86rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .name {
+        font-size: 2.1rem;
+        line-height: 1.1;
+        letter-spacing: -1px;
+    }
+    
+    .name-part {
+        font-size: 2.1rem;
+    }
+
+    .role {
+        font-size: 1.12rem;
+    }
+
+    .greeting {
+        font-size: 1.03rem;
+    }
+
+    .hero-description {
+        font-size: 0.96rem;
+        padding: 0 6px;
+        line-height: 1.65;
+        margin-bottom: 1.6rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        margin: 1.6rem 0;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;
+    }
+
+    .stat-label {
+        font-size: 0.72rem;
+        line-height: 1.25;
+    }
+
+    .image-placeholder {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-buttons {
+        gap: 0.85rem;
+        margin-top: 1.6rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        padding: 10px 24px;
+        font-size: 0.91rem;
+        width: 100%;
+        max-width: 260px;
+        min-height: 44px;
+    }
+
+    .section-header {
+        margin-bottom: 3rem;
+    }
+
+    .section-title {
+        font-size: 1.85rem;
+        margin-bottom: 1.2rem;
+        letter-spacing: -0.3px;
+    }
+
+    .section-subtitle {
+        font-size: 0.98rem;
+        padding: 0 10px;
+        line-height: 1.6;
+    }
+
+    section {
+        padding: 52px 0;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    /* About Section - Standard Mobile */
+    .about-content {
+        gap: 2rem;
+        margin-top: 1.75rem;
+    }
+
+    .about-visual {
+        order: -1;
+    }
+
+    .visual-card {
+        padding: 2rem 1.5rem;
+        transform: rotate(0deg);
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .visual-card:hover {
+        transform: scale(1.02);
+    }
+
+    .visual-icon {
+        font-size: 3.2rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .visual-card h3 {
+        font-size: 1.45rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .visual-card p {
+        font-size: 0.92rem;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.4rem;
+        text-align: center;
+    }
+
+    .bio-info {
+        grid-template-columns: 1fr;
+        gap: 1.15rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .bio-item {
+        gap: 0.35rem;
+    }
+
+    .bio-label {
+        font-size: 0.87rem;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    .bio-value {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .bio-description {
+        font-size: 0.98rem;
+        line-height: 1.7;
+        text-align: justify;
+        margin-top: 1.4rem;
+    }
+
+    .timeline {
+        padding-left: 1.75rem;
+    }
+
+    .timeline-item {
+        padding-left: 2.25rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .timeline-content {
+        padding: 1.75rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.35rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 1.05rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .timeline-tasks li {
+        font-size: 0.93rem;
+        line-height: 1.6;
+        margin-bottom: 0.6rem;
+    }
+
+    .skill-category {
+        padding: 2rem 1.75rem;
+    }
+
+    .skill-category h3 {
+        font-size: 1.35rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .skill-badge {
+        padding: 8.5px 17px;
+        font-size: 0.88rem;
+    }
+
+    .portfolio-grid {
+        gap: 1.65rem;
+    }
+
+    .portfolio-info {
+        padding: 1.65rem;
+    }
+
+    .portfolio-info h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .portfolio-info p {
+        font-size: 0.93rem;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+    }
+
+    .portfolio-tags {
+        gap: 0.6rem;
+    }
+
+    .tag {
+        padding: 5px 11px;
+        font-size: 0.83rem;
+    }
+
+    .contact-content {
+        gap: 1.65rem;
+    }
+
+    .contact-card {
+        padding: 1.85rem 1.35rem;
+    }
+
+    .contact-card-icon {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 1.25rem;
+    }
+
+    .contact-card h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .contact-card p {
+        font-size: 0.93rem;
+        margin-bottom: 1.15rem;
+    }
+
+    .contact-link {
+        padding: 9px 22px;
+        font-size: 0.88rem;
+        min-height: 42px;
+    }
+
+    .scroll-to-top {
+        width: 52px;
+        height: 52px;
+        bottom: 22px;
+        right: 22px;
+    }
+
+    .scroll-to-top svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* Mobile - iPhone SE & Small (360px - 389px) */
+@media (max-width: 389px) and (min-width: 360px) {
+    .navbar .container {
+        padding: 0.8rem 14px;
+    }
+
+    .nav-brand {
+        font-size: 1.25rem;
+    }
+
+    .nav-menu {
+        top: 66px;
     }
 
     .nav-menu a {
         padding: 1rem 1.5rem;
         font-size: 0.95rem;
+        min-height: 46px;
     }
 
     .hamburger {
@@ -2538,53 +3250,16 @@ section {
     }
 
     .hero {
-        padding: 70px 0 30px;
+        padding: 72px 0 28px;
     }
 
     .name {
         font-size: 2rem;
-    }
-
-    .name-part {
-        display: contents;
+        line-height: 1.1;
     }
 
     .role {
         font-size: 1.1rem;
-    }
-
-    .role-word {
-        display: block;
-    }
-
-    .hero-stats {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        padding: 1.5rem 1rem;
-    }
-
-    .stat-number {
-        font-size: 1.5rem;
-    }
-
-    .stat-label {
-        font-size: 0.75rem;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .visual-card {
-        padding: 2rem;
-    }
-
-    .visual-icon {
-        font-size: 3rem;
-    }
-
-    .visual-card h3 {
-        font-size: 1.5rem;
     }
 
     .greeting {
@@ -2593,12 +3268,36 @@ section {
 
     .hero-description {
         font-size: 0.95rem;
-        padding: 0 10px;
+        padding: 0 8px;
+        line-height: 1.65;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        margin: 1.75rem 0;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+        line-height: 1.3;
     }
 
     .image-placeholder {
         width: 180px;
         height: 180px;
+    }
+
+    .btn {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+        max-width: 260px;
+        min-height: 44px;
     }
 
     .section-title {
@@ -2608,7 +3307,7 @@ section {
 
     .section-subtitle {
         font-size: 0.95rem;
-        padding: 0 10px;
+        padding: 0 8px;
     }
 
     section {
@@ -2616,23 +3315,7 @@ section {
     }
 
     .container {
-        padding: 0 15px;
-    }
-
-    .about-text h3 {
-        font-size: 1.5rem;
-    }
-
-    .timeline-content h3 {
-        font-size: 1.3rem;
-    }
-
-    .timeline-content h4 {
-        font-size: 1rem;
-    }
-
-    .skill-category h3 {
-        font-size: 1.3rem;
+        padding: 0 14px;
     }
 
     .skill-badge {
@@ -2648,38 +3331,140 @@ section {
         font-size: 0.9rem;
     }
 
+    .contact-card {
+        padding: 1.5rem 1.2rem;
+    }
+
     .scroll-to-top {
         width: 50px;
         height: 50px;
         bottom: 20px;
         right: 20px;
     }
+}
 
-    .scroll-to-top svg {
-        width: 20px;
-        height: 20px;
+/* Mobile - Very Small (below 360px) */
+@media (max-width: 359px) {
+    .navbar .container {
+        padding: 0.75rem 12px;
     }
 
-    .contact-card {
-        padding: 1.5rem 1rem;
+    .nav-brand {
+        font-size: 1.2rem;
+        padding: 6px 12px;
     }
 
-    .contact-card-icon {
-        width: 60px;
-        height: 60px;
+    .nav-menu {
+        top: 64px;
     }
 
-    .contact-card h3 {
-        font-size: 1.1rem;
+    .nav-menu a {
+        padding: 0.95rem 1.25rem;
+        font-size: 0.93rem;
+        min-height: 44px;
     }
 
-    .contact-card p {
+    .hamburger {
+        width: 22px;
+        height: 2.5px;
+    }
+
+    .hero {
+        padding: 70px 0 25px;
+    }
+
+    .name {
+        font-size: 1.85rem;
+        line-height: 1.1;
+    }
+
+    .role {
+        font-size: 1.05rem;
+    }
+
+    .greeting {
+        font-size: 0.95rem;
+    }
+
+    .hero-description {
         font-size: 0.9rem;
+        padding: 0 5px;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.9rem;
+        padding: 1.4rem 0.9rem;
+        margin: 1.5rem 0;
+    }
+
+    .stat-number {
+        font-size: 1.4rem;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+        line-height: 1.25;
+    }
+
+    .image-placeholder {
+        width: 170px;
+        height: 170px;
     }
 
     .btn {
-        padding: 10px 20px;
+        padding: 9px 20px;
+        font-size: 0.88rem;
+        max-width: 240px;
+        min-height: 42px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        letter-spacing: -0.15px;
+    }
+
+    .section-subtitle {
         font-size: 0.9rem;
+        padding: 0 5px;
+    }
+
+    section {
+        padding: 45px 0;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .skill-badge {
+        padding: 7px 14px;
+        font-size: 0.82rem;
+    }
+
+    .portfolio-info {
+        padding: 1.4rem;
+    }
+
+    .portfolio-info h3 {
+        font-size: 1.15rem;
+    }
+
+    .portfolio-info p {
+        font-size: 0.88rem;
+    }
+
+    .contact-card {
+        padding: 1.4rem 1rem;
+    }
+
+    .scroll-to-top {
+        width: 48px;
+        height: 48px;
+        bottom: 18px;
+        right: 18px;
     }
 
     /* Modal responsive */
@@ -2792,6 +3577,71 @@ section {
 
     section {
         padding: 40px 0;
+    }
+
+    /* About Section - Very Small Mobile */
+    .about-content {
+        gap: 1.25rem;
+        margin-top: 1rem;
+    }
+
+    .about-visual {
+        order: -1;
+    }
+
+    .visual-card {
+        padding: 1.25rem 0.9rem;
+        transform: rotate(0deg);
+        border-radius: 16px;
+    }
+
+    .visual-card:hover {
+        transform: scale(1.01);
+    }
+
+    .visual-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .visual-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .visual-card p {
+        font-size: 0.8rem;
+    }
+
+    .about-text h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .bio-info {
+        gap: 0.85rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .bio-item {
+        gap: 0.2rem;
+    }
+
+    .bio-label {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+
+    .bio-value {
+        font-size: 0.82rem;
+        line-height: 1.4;
+    }
+
+    .bio-description {
+        font-size: 0.88rem;
+        line-height: 1.55;
+        margin-top: 1rem;
     }
 
     .contact-card {

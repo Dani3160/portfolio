@@ -56,8 +56,7 @@ export default function Hero() {
           <h1 className="hero-title">
             <span className="greeting">Halo, Saya</span>
             <span className="name">
-              <span className="name-part">Dani</span>
-              <span className="name-part">Ramdani</span>
+              <span className="name-part">Dani Ramdani</span>
             </span>
             <span className="role">
               <span className="role-word">Web</span>
