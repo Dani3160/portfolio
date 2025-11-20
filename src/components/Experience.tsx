@@ -13,7 +13,7 @@ export default function Experience() {
     },
     {
       date: '2023 - 2024',
-      title: 'Web Developer',
+      title: 'Fullstack Developer',
       company: 'Jakarta Eye Center (JEC)',
       description: 'Berpengalaman mengembangkan sistem HR dan platform rekrutmen yang membantu otomatisasi proses operasional perusahaan. Fokus pada efisiensi, kemudahan penggunaan, dan digitalisasi alur kerja.',
       tasks: [
@@ -23,7 +23,7 @@ export default function Experience() {
     },
     {
       date: '2020 - 2023',
-      title: 'Web Developer',
+      title: 'Fullstack Developer',
       company: 'PT EANNOVATE',
       description: 'Berpengalaman mengembangkan fitur, modul, dan REST API pada CMS perusahaan, serta melakukan maintenance dan pengembangan front-end untuk berbagai website klien. Fokus pada antarmuka, performa, stabilitas sistem, dan peningkatan pengalaman pengguna.',
       tasks: [
@@ -33,7 +33,7 @@ export default function Experience() {
     },
     {
       date: '2019 - 2020',
-      title: 'Web Developer',
+      title: 'Fullstack Developer',
       company: 'PT ASQI DIGITAL INNOVATION',
       description: 'Memulai karir sebagai Junior Web Developer. Berpengalaman dalam pengembangan aplikasi internal perbankan dan sistem informasi desa. Berkontribusi dalam tim serta mengerjakan proyek personal dengan fokus pada efisiensi, digitalisasi, dan kemudahan operasional.',
       tasks: [
