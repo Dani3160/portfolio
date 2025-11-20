@@ -1448,6 +1448,11 @@ section {
     overflow: hidden;
 }
 
+.contact-card > * {
+    position: relative;
+    z-index: 1;
+}
+
 .contact-card::before {
     content: '';
     position: absolute;
@@ -1458,6 +1463,8 @@ section {
     background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(236, 72, 153, 0.1) 50%, transparent 70%);
     opacity: 0;
     transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .contact-card:hover {
