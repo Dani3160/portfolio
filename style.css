@@ -734,23 +734,6 @@ section {
     position: relative;
 }
 
-.section-number {
-    font-size: 8rem;
-    font-weight: 900;
-    background: var(--bg-gradient-2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    opacity: 0.15;
-    position: absolute;
-    top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 1;
-    z-index: 0;
-    pointer-events: none;
-}
-
 .section-title {
     font-size: 3rem;
     font-weight: 800;
@@ -2161,11 +2144,6 @@ section {
         display: none;
     }
 
-    .section-number {
-        font-size: 5rem;
-        top: -40px;
-    }
-
     .section-title {
         font-size: 2rem;
     }
@@ -2320,11 +2298,6 @@ section {
 
     .stat-label {
         font-size: 0.75rem;
-    }
-
-    .section-number {
-        font-size: 4rem;
-        top: -30px;
     }
 
     .section-title {
