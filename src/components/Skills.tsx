@@ -10,7 +10,7 @@ export default function Skills() {
     {
       title: 'Backend Development',
       skills: [
-        'PHP', 'Laravel', 'CodeIgniter', 'Node.js', 'Express.js', 'Nest JS', 'Bun',
+        'PHP', 'Laravel', 'Symfony', 'Lumen', 'CodeIgniter', 'Node.js', 'Express.js', 'Nest JS', 'Bun',
         'Python', 'Golang', 'MySQL', 'MongoDB', 'PostgreSQL', 'RabbitMQ', 'REST API',
         'Microservice', 'Websocket', 'Socket.io'
       ],
